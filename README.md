@@ -1,4 +1,4 @@
-# Discord ChatGPT
+# Discord ChatBot
 
 ## Getting started
 
