@@ -21,7 +21,8 @@ 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
 1. Create your ChatGPT bot in https://discord.com/developers/applications
 2. Check `MESSAGE CONTENT INTENT` under bot setting
 3. Generate bot invitation url under OAuth2 setting
-   (select `bot` and `application.commands` in the scope)
+   (select `bot` and `application.commands` in the scope and
+   with administrator permission)
 4. Invite bot the your channel
 
 ### Deploy OpenFaaS to local Kubernetes on AWS EC2 instance
