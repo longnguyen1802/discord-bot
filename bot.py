@@ -110,19 +110,29 @@ async def handleChatGpt(message):
 
 @client.event
 async def on_message(message):
+    loop = asyncio.get_event_loop()
     # ChatGPT
     if (
         message.type == discord.MessageType.default
         and (message.channel.name == "chatgpt" or message.content.startswith("!chat"))
         and not message.author.bot
     ):
-        asyncio.create_task(handleChatGpt(message))
+        try:
+            await asyncio.create_task(handleChatGpt(message))
+        except:
+            pass
     # Image moderation
     elif message.attachments:
-        asyncio.create_task(handleNsfw(message))
+        try:
+            await asyncio.create_task(handleNsfw(message))
+        except:
+            pass
     # Toxic Comment Moderation
     elif message.type == discord.MessageType.default and message.author != client.user:
-        asyncio.create_task(handleToxicComment(message))
+        try:
+            await asyncio.create_task(handleToxicComment(message))
+        except:
+            pass
 
 
 @client.event
