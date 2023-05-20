@@ -114,7 +114,7 @@ async def on_message(message):
     if (
         message.type == discord.MessageType.default
         and (message.channel.name == "chatgpt" or message.content.startswith("!chat"))
-        and message.author != client.user
+        and not message.author.bot
     ):
         asyncio.create_task(handleChatGpt(message))
     # Image moderation
