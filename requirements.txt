@@ -1,0 +1,7 @@
+discord
+requests
+json
+python-dotenv
+ssl
+certifi
+asyncio

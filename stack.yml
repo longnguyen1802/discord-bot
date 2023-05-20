@@ -1,0 +1,28 @@
+version: 1.0
+provider:
+    name: openfaas
+functions:
+    openfaas-opennsfw:
+        lang: dockerfile
+        handler: ./openfaas-opennsfw
+        image: servernull/openfaas-opennsfw:0.1.0
+        environment:
+            read_timeout: 120
+            write_timeout: 120
+            exec_timeout: 120
+    toxic-comment:
+        lang: dockerfile
+        handler: ./toxic-comment
+        image: longnguyen1802/toxic-comment:latest
+        environment:
+            read_timeout: 600
+            write_timeout: 600
+            exec_timeout: 600
+    chatgpt:
+        lang: dockerfile
+        handler: ./chatgpt
+        image: wilsonng234/chatgpt:latest
+    dalle2:
+        lang: dockerfile
+        handler: ./dalle2
+        image: wilsonng234/dalle2:latest
