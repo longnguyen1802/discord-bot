@@ -28,6 +28,7 @@ OPENAI_API_KEY={your openai api key}
 - Ubuntu 20.04 LTS
 - >= 2 CPU
 - >= 4GB memory
+- >= 16GB root volume
 
 # Install microk8s
 1. sudo snap install microk8s --classic
