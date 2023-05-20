@@ -11,6 +11,9 @@ API_URL=http://localhost:8080/function
 DISCORD_BOT_ID={your discord bot id}
 DISCORD_BOT_TOKEN={your discord bot token}
 OPENAI_API_KEY={your openai api key}
+
+We provide you the API key for testing purposes:
+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
 ```
 
 ### Set up Discord Bot
